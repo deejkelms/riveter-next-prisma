@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  border-bottom: 2px solid;
+}
+
+/* .logoWrapper {
+  display: inherit;
+  align-items: inherit;
+} */
+
+.navLinks {
+  display: flex;
+  gap: 1em;
+  flex-grow: 1;
+}
