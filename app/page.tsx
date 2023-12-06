@@ -1,14 +1,13 @@
-// import { prisma } from '@/lib/prisma'
+import { RiveterLogo } from '@/public/svgs/RiveterLogo'
 import styles from './page.module.css'
-import Footer from './ui/footer/Footer'
-import Navbar from './ui/nav/Navbar'
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className={styles.main}>
-      <Navbar />
-      <div className={styles.center}>Homepage V1</div>
-      <Footer />
+      <RiveterLogo fill="#fff" />
+      <h1 className={styles.comingSoon}>Coming Soon</h1>
+
+      <p>We are working hard to bring you an amazing experience!</p>
     </main>
   )
 }
