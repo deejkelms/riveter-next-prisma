@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Running the app
+Make sure your node version is up to date. You'll need at least Node.js >= 16.13 to support prisma, which we are using.
+Next requires '>=18.17.0'  as of 12/14/23.
+
+npm install
+
 ## Getting Started
 
 First, run the development server:
