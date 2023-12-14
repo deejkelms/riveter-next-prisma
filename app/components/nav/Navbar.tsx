@@ -1,8 +1,10 @@
 'use client'
 
+import { RiveterLogo } from '@/public/svgs/RiveterLogo'
 import styles from './nav.module.css'
 import { AppBar, Button, Toolbar, Typography } from '@mui/material'
 import Link from 'next/link'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 type User = {
   email: string
@@ -13,6 +15,36 @@ type Props = {
   loggedInUser?: User
 }
 
+function AuthButton() {
+  const { data: session } = useSession()
+  if (session) {
+    return (
+      <>
+        {session?.user?.name} <br />
+        <Button
+          // variant="outlined"
+          sx={{ textTransform: 'none', my: 1, mx: 1.5 }}
+          onClick={() => signOut()}
+        >
+          Sign Out
+        </Button>
+      </>
+    )
+  }
+  return (
+    <>
+      Not signed in <br />
+      <Button
+        // variant="outlined"
+        sx={{ textTransform: 'none', my: 1, mx: 1.5 }}
+        onClick={() => signIn()}
+      >
+        Sign In
+      </Button>
+    </>
+  )
+}
+
 // https://github.com/mui/material-ui/blob/v5.14.17/docs/data/material/getting-started/templates/pricing/Pricing.tsx
 const Navbar = (props: Props) => {
   return (
@@ -20,26 +52,25 @@ const Navbar = (props: Props) => {
       position="static"
       color="default"
       elevation={0}
-      sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+      sx={{
+        background: 'black',
+        color: 'white',
+        borderBottom: '1px solid white',
+        // borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
+      }}
     >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography
           variant="h5"
           color="inherit"
           noWrap
-          sx={{ marginRight: '1rem' }}
+          sx={{ marginRight: '1rem', flexGrow: 1 }}
         >
           Riveter
-          {/* <Image
-            src="/riveter.svg"
-            alt="Riveter Logo"
-            width={40}
-            height={40}
-            priority
-          /> */}
+          {/* <RiveterLogo fill="#000000" /> */}
         </Typography>
 
-        <nav className={styles.navLinks}>
+        {/* <nav className={styles.navLinks}>
           <Link color="text.primary" href="#">
             For Job Seekers
           </Link>
@@ -52,16 +83,17 @@ const Navbar = (props: Props) => {
           <Link color="text.primary" href="#">
             About
           </Link>
-        </nav>
+        </nav> */}
 
-        <Link href="/login">
+        {/* <Link href="/login">
           <Button
             variant="outlined"
             sx={{ textTransform: 'none', my: 1, mx: 1.5 }}
           >
             Sign Up
           </Button>
-        </Link>
+        </Link> */}
+        <AuthButton />
       </Toolbar>
     </AppBar>
   )
