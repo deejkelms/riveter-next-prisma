@@ -1,21 +1,22 @@
 'use client'
 
+import { RiveterLogo } from '@/public/svgs/RiveterLogo'
 import {
   Avatar,
   Box,
   Button,
-  Checkbox,
+  //   Checkbox,
   Container,
   CssBaseline,
-  FormControlLabel,
-  Grid,
+  //   FormControlLabel,
+  //   Grid,
   TextField,
   Typography,
 } from '@mui/material'
-import Link from 'next/link'
 
-export default function LoginPage() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+// mui? come back later?
+export default function RegisterPage() {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
     console.log({
@@ -23,7 +24,6 @@ export default function LoginPage() {
       password: data.get('password'),
     })
   }
-
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -35,13 +35,28 @@ export default function LoginPage() {
           alignItems: 'center',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          {/* <LockOutlinedIcon /> */}
+        <Avatar sx={{ m: 0.5, bgcolor: '#000', width: '2em' }}>
+          <RiveterLogo fill="#EEE" />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Create your Account
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box
+          component="form"
+          // onSubmit={handleSubmit}
+          noValidate
+          sx={{ mt: 1 }}
+        >
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            id="name"
+            label="Name"
+            name="name"
+            autoComplete="name"
+            autoFocus
+          />
           <TextField
             margin="normal"
             required
@@ -50,7 +65,6 @@ export default function LoginPage() {
             label="Email Address"
             name="email"
             autoComplete="email"
-            autoFocus
           />
           <TextField
             margin="normal"
@@ -62,26 +76,26 @@ export default function LoginPage() {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
-          />
+          /> */}
           <Button
             type="submit"
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Sign In
+            Sign up
           </Button>
-          <Grid container>
+          {/* <Grid container>
             <Grid item xs>
               <Link href="#">Forgot password?</Link>
             </Grid>
             <Grid item>
               <Link href="/signup">{"Don't have an account? Sign Up"}</Link>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Box>
       </Box>
     </Container>
