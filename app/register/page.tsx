@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { hash } from 'bcrypt'
 import Link from 'next/link'
-// import { randomUUID } from 'crypto'
+import { randomUUID } from 'crypto'
 import styles from './register.module.css'
 
 export default function RegisterPage() {
@@ -27,26 +27,41 @@ export default function RegisterPage() {
     // })
   }
 
+  async function verifyEmail(data: FormData) {
+    'use server'
+
+    const token = await prisma.verificationToken.create({
+      data: {
+        identifier: 'email',
+        expires: new Date(Date.now() + 30 * 60000),
+        token: `${randomUUID()}${randomUUID()}`.replace(/-/g, ''),
+      },
+    })
+
+    // send the email
+  }
+
   return (
     <div className={styles.signup_container}>
       <div className={styles.signup_formWrapper}>
         <h1>Sign Up</h1>
-        <form className={styles.signup_form} action={registerUser}>
-          <input className="input" name="name" placeholder="Name" />
+        <form className={styles.signup_form} action={verifyEmail}>
+          {/* <input className="input" name="name" placeholder="Name" /> */}
+          <label htmlFor="email">Email</label>
           <input
             className="input"
             name="email"
             type="email"
-            placeholder="Email"
+            placeholder="Enter your email address.."
           />
-          <input
+          {/* <input
             className="input"
             name="password"
             type="password"
             placeholder="Password"
-          />
+          /> */}
           <button className="button" type="submit">
-            Register
+            Verify your email
           </button>
         </form>
         <div className={styles.signin}>
