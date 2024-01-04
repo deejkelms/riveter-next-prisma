@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
 import { getServerSession } from 'next-auth'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
 import SessionProvider from './components/SessionProvider'
-import Navbar from './components/nav/Navbar'
+// import Navbar from './components/nav/Navbar'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: 'Riveter',
@@ -22,7 +25,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <SessionProvider session={session}>
           {/* <Navbar /> uncomment locally*/}
           {children}
