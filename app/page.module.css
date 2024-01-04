@@ -5,8 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: #fff;
-  background: #000;
+  background: #f8f8f8;
 }
 
 .main svg {
