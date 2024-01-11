@@ -8,7 +8,7 @@ import './globals.css'
 import {Footer} from './components/footer/Footer'
 
 const roboto = Roboto({
-  weight: ['400', '500'],
+  weight: ['300', '400', '500'],
   subsets: ['latin'],
 })
 
