@@ -3,11 +3,12 @@ import { getServerSession } from 'next-auth'
 import { Roboto } from 'next/font/google'
 
 import SessionProvider from './components/SessionProvider'
-// import Navbar from './components/nav/Navbar'
+import {Navbar} from './components/nav/Navbar'
 import './globals.css'
+import {Footer} from './components/footer/Footer'
 
 const roboto = Roboto({
-  weight: '400',
+  weight: ['400', '500'],
   subsets: ['latin'],
 })
 
@@ -27,8 +28,9 @@ export default async function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <SessionProvider session={session}>
-          {/* <Navbar /> uncomment locally*/}
+          <Navbar />
           {children}
+          <Footer />
         </SessionProvider>
       </body>
     </html>
