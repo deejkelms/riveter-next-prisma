@@ -5,7 +5,7 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import { GridItem } from '../ui/GridItem';
 import { Heading } from '../typography/Heading';
-import { SignUpButton } from '../SUSI/SIgnUpButton';
+import { SignUpButton } from '../SUSI/SignUpButton';
 import { LearnMoreLink } from '../nav/LearnMoreLink';
 import { Divider } from '../ui/Divider';
 import { Subheading } from '../typography/Subheading';
