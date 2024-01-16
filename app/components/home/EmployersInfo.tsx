@@ -5,7 +5,6 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import { GridItem } from '../ui/GridItem';
 import { Heading } from '../typography/Heading';
-import { SignUpButton } from '../SUSI/SignUpButton';
 import { LearnMoreLink } from '../nav/LearnMoreLink';
 import { Divider } from '../ui/Divider';
 import { Subheading } from '../typography/Subheading';
@@ -38,7 +37,6 @@ export const EmployersInfo = () => {
               <Heading scale="S">Identifying and sourcing the best talent and best fit for small business owners.</Heading>
             </Box>
             <Box sx={{display: {xs: 'flex', md: 'block'}, justifyContent: {xs: 'space-between', md: 'flex-start', width: '100%'}}}>
-            <SignUpButton />
             <LearnMoreLink />
           </Box>
           </Box>
