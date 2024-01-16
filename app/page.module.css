@@ -1,20 +1,21 @@
 .main {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #f8f8f8;
 }
 
-.main svg {
-  width: 10rem;
+.employersCallout {
+  display: flex;
 }
 
-.main h1 {
-  border-bottom: 2px solid;
-  padding: 12px;
-  margin-bottom: 24px;
-  margin-top: 56px;
+.flex {
+  display: flex;
+}
+
+.employersList {
+  padding: 24px 0;
+}
+
+.employersListz {
+  padding: 24px 0;
+  margin-left: 0,
 }
