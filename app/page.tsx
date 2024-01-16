@@ -6,7 +6,7 @@ import { SignUpCTA } from './components/SignUpCTA';
 import { GridItem } from './components/ui/GridItem';
 import { MediaTextBlock } from './components/copyright/MediaTextBlock';
 import { Heading } from './components/typography/Heading';
-import EmployersInfo from './components/home/EmployersInfo';
+import { EmployersInfo } from './components/home/EmployersInfo';
 
 export default function Home() {
   return (
@@ -43,7 +43,7 @@ export default function Home() {
           copy="Take control of your career and work in an industry that excites you and aligns with your career goals."
         />
       </Box>
-      <EmployersInfo styles={styles} />
+      <EmployersInfo />
     </main>
   )
 }

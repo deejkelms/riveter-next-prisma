@@ -9,9 +9,10 @@ import { SignUpButton } from '../SUSI/SignUpButton';
 import { LearnMoreLink } from '../nav/LearnMoreLink';
 import { Divider } from '../ui/Divider';
 import { Subheading } from '../typography/Subheading';
+import styles from '../../page.module.css'
 
 // todo: fix props and types
-const GridItemRow = ({styles, icon, subheadingText, copy}: {styles: any, icon: any, subheadingText: string, copy: string}) => {
+const GridItemRow = ({icon, subheadingText, copy}: {icon: any, subheadingText: string, copy: string}) => {
   return (
     <Grid container rowSpacing={2} columnSpacing={2} className={styles.employersListz}>
       <GridItem xs={2}>{icon}</GridItem>
@@ -26,7 +27,7 @@ const GridItemRow = ({styles, icon, subheadingText, copy}: {styles: any, icon: a
 }
 
 // todo: fix any type
-export default function EmployersInfo({styles}: {styles: any}) {
+export const EmployersInfo = () => {
   return (
     <Box maxWidth="912px" width="100%" sx={{background: '#fff', marginTop: '82px', margin: '82px auto 0', borderRadius: '8px', padding: '28px 52px 24px'}}>
       <Grid container rowSpacing={2} columnSpacing={2} className={styles.employersCallout}>
@@ -46,7 +47,6 @@ export default function EmployersInfo({styles}: {styles: any}) {
           <Box sx={{display: 'flex', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
             <Grid container rowSpacing={2} columnSpacing={2} className={styles.employersList}>
               <GridItemRow
-                styles={styles}
                 icon={<GroupsIcon sx={{fontSize: '60px', color: '#0054b6'}} />}
                 subheadingText="Talent Pipeline."
                 copy="Tap into a motivated talent pool and connect with ambitious individuals eager to grow in or break into your industry." />
@@ -54,7 +54,6 @@ export default function EmployersInfo({styles}: {styles: any}) {
             <Divider />
             <Grid container rowSpacing={2} columnSpacing={2} className={styles.employersList}>
               <GridItemRow
-                styles={styles}
                 icon={<PsychologyIcon sx={{fontSize: '60px', color: '#0054b6'}} />}
                 subheadingText="Fill the talent gaps."
                 copy="We analyze candidates' skills that break the mold to infuse your organization with a fresh perspective." />
@@ -62,7 +61,6 @@ export default function EmployersInfo({styles}: {styles: any}) {
             <Divider />
             <Grid container rowSpacing={2} columnSpacing={2} className={styles.employersList}>
               <GridItemRow
-                styles={styles}
                 icon={<HandshakeIcon sx={{fontSize: '60px', color: '#0054b6'}} />}
                 subheadingText="Hire better talent faster"
                 copy="The candidates on Riveter are qualified and ready to interview. Our approach is designed to alleviate hiring challenges and provide you with a seamless hiring process."
