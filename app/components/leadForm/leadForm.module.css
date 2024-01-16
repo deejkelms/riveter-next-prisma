@@ -1,36 +1,92 @@
-.lead_form {
+.leadForm {
+  background: #fff;
+  width: 40.125rem;
+  height: 19rem;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.leadForm h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 4.125rem;
+  letter-spacing: -0.0125rem;
+}
+
+.leadForm .subtitle {
+  width: 21.3125rem;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  letter-spacing: 0.005rem;
+}
+
+.leadForm form {
   display: flex;
   flex-direction: column;
-  margin: 48px 0;
-  width: 24.5625rem;
-  border-radius: 0.5rem;
-  background: #fff;
-  padding: 24px;
+  width: 14.4375rem;
+  margin: 1rem auto 0;
 }
 
-.lead_form label {
+.leadForm label {
+  font-size: 0.75rem;
   text-align: left;
-  margin-bottom: 8px;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0.01125rem;
+  text-transform: uppercase;
 }
 
-.lead_form input {
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 16px;
+.leadForm input {
+  margin-bottom: 0.63rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #b1b1b1;
+  padding: 0.75rem 0.5rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0.01125rem;
 }
 
-.lead_form button {
+.leadForm button {
+  text-transform: uppercase;
+  border-radius: 0.25rem;
   background-color: #0265dc;
   color: #fff;
-  padding: 10px;
-  font-size: 16px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0125rem;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  width: 10.4375rem;
+  margin: 0 auto;
 }
 
-.lead_form button:hover {
+.leadForm button:hover {
   background-color: #0054b6;
+}
+
+.leadForm .successMessage {
+  text-align: left;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.005rem;
+}
+
+.headingText {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.headingText svg {
+  width: unset;
+  margin: 4px;
 }
