@@ -1,6 +1,6 @@
 'use client'
 
-import RiveterLogo from '@/public/svgs/RiveterLogo.svg'
+import RiveterLogo from '../../../public/svgs/RiveterLogo.svg'
 import styles from './nav.module.css'
 import { AppBar, Button, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Divider } from '@mui/material'
 import Link from 'next/link'

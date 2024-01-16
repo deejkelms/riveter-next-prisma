@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 
-import RiveterLogo from '@/public/svgs/RiveterLogo.svg'
+import RiveterLogo from '../../../public/svgs/RiveterLogo.svg'
 
 // https://github.com/mui/material-ui/blob/v5.14.17/docs/data/material/getting-started/templates/pricing/Pricing.tsx
 export const Footer = () => {

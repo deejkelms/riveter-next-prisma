@@ -1,6 +1,6 @@
 'use client'
 
-import RiveterLogo from '@/public/svgs/RiveterLogo.svg'
+import RiveterLogo from '../../public/svgs/RiveterLogo.svg'
 import {
   Avatar,
   Box,
